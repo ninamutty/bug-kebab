@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
+  root to: 'beetle#index'
+  
   get 'beetle/index'
 
-  get 'beetle/new'
+  get 'beetle/new' => 'beetle#new', as: 'new'
 
-  get 'beetle/create'
+  post 'beetle/create' => 'beetle#create', as: 'create'
 
   get 'beetle/show'
 

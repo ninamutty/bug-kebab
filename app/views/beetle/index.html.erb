@@ -1,2 +1,9 @@
-<h1>Beetle#index</h1>
-<p>Find me in app/views/beetle/index.html.erb</p>
+<h1>All The Beetles</h1>
+<% @allbeetles.each do |beetle| %>
+  <article>
+    <h2>  <%= beetle.name %>  </h2>
+    <p> <%= beetle.description %> </p>
+  </article>
+<% end %>
+
+<p class="go-to-new"><%= link_to("+ Add Beetle", new_path) %></p>
